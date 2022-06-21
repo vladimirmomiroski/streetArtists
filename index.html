@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+    src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    data-auto-a11y="true"
+  ></script>
+    
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+
+    <header id="header">
+      <nav id="navbar" class="navbar">
+        <img id="logo" class="logo" src="images/logo.png" alt="logo">
+        <h1 class="title" id="titleArtist">Street ARTists</h1>
+        <div>
+          <img id="auctionLogo" class="auction-logo" src="images/auction.png" alt="auction">
+          <img id="hamburgerMenu" class="hamburger-menu" src="images/hamburger.svg" alt="hamburger icon">
+        </div>
+        <div id="menuPopup" class="menu">
+          <a href="index.html#artists">Home</a>
+          <a href="index.html#artists/items">Items</a>
+          <a href="index.html#auction">Auction</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Landing Page -->
+
+      <div id="landingPage" class="landing-page">
+        <div class="logo-landing-page">
+          <img class="logo-landing" src="images/Logo.png" alt="Logo Landing Page">
+        </div>
+        <div class="landing-page-card">
+          <div class="choose-artist" id="chooseArtist">
+            <div class="join-artist-wrapper">
+            <p>Join as Artist</p>
+            <select name="Choose" id="selectArtist" class="select-artist global-select">
+              <option value="">Choose</option>
+            </select>
+          </div>
+          </div>
+          <div class="join-visitor" id="joinVisitor">
+            <div class="join-visitor-text">
+            <p>Join as Visitor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Artist homepage -->
+      <div id="artistHomePage" class="artist-homepage">
+      <div class="artist-income">
+       <div class="sold-income-wrapper">
+         <div class="sold-container">
+            <p class="title-box-info">Total items Sold</p>
+            <div class="total-items-sold" id="totalItemsSold"></div>
+         </div>
+         <div class="income-container">
+             <p class="title-box-info">total income</p>
+            <div class="total-income" id="totalIncome"></div>
+         </div>
+       </div>
+       <div class="live-auctioning-wrapper">
+          <p class="title-box-info">Live Auctioning Item</p>
+          <div class="live-auctioning-item" id="liveAuctioningItem">/</div>
+          <p class="title-box-info">current bid</p>
+       </div>
+      </div>
+      <div class="chart-wrapper">
+        <div class="btn-wrapper-chart">
+        <p class="chart-text">Display income for last</p>
+        <button class="btn-chart" data-id="7">7days</button>
+        <button class="btn-chart" data-id="14">14days</button>
+        <button class="btn-chart" data-id="30">30days</button>
+      </div> 
+        <canvas id="myChart" height="300"></canvas>
+      </div>
+      </div>
+
+      <!-- Artist Listing Page -->
+
+      <div id="artistListing" class="artist-listing">
+        <div class="new-item-container">
+          <div class="new-item" id="newItemArtist">
+            <p class="new-item-text">+ Add new item</p>
+          </div>
+       </div>
+        <div id="artistListingContainer">
+         
+        </div>
+      </div> 
+
+      <!-- New Item && Edit Item -->
+
+     <div id="newItemSection" class="new-item-section">
+       <form class="item-form" id="itemForm">
+         <div class="title-published-wrapper">
+         <p class="form-title formTitle" id="formTitle"></p>
+         <div class="form-group-published">
+         <label for="isPublished">Is Published</label>
+         <input id="isPublished" type="checkbox">
+        </div>
+        </div>
+        <div class="form-group-title">
+          <label for="title">Title</label>
+          <input id="title" type="text">
+        </div>
+        <div class="form-group-textarea">
+          <label for="description">Description</label>
+          <textarea id="description" rows="6"></textarea>
+        </div>
+         <div class="type-price-wrapper">
+          <div class="form-group-type">
+            <label for="type" required>Type</label>
+            <select id="selectNewItem" required> 
+              <option value="">Choose</option>
+            </select>
+          </div>
+          <div class="form-group-price">
+            <label for="price">Price</label>
+            <input id="price" type="number" required>
+          </div>
+         </div>
+         <div class="form-group-url">
+          <label for="imgUrl">Image URL</label>
+          <input id="imgUrl" type="text" required>
+        </div>
+        <div id="snapshotImageContainer" class="snapshot-image-container">
+             <p class="or-text">or</p>
+             <div id="snapshotWrapper" class="snapshot-wrapper">
+              <img id="snapshotImgTaken" class="snapshot-image-taken">
+               <img class="snapshot" src="images/snapshot-image.png" alt="snapshot icon">
+               <p class="snapshot-text">Take a snapshot</p>
+             </div>
+        </div>
+        <div class="form-button-wrapper">
+          <button id="submitBtn" class="btn-form submit-btn"></button>
+          <button id="cancelBtn" type="button" class="btn-form cancel-btn">Cancel</button>
+        </div>
+       </form>
+       
+     </div>
+
+     <!-- Capture Image -->
+
+     <div class="capture-image-page" id="captureImagePage">
+      <p class="snapshot-page-text">Take a Snapshot <i class="fas fa-camera capture-icons"></i></p>
+      <div class="camera">
+        <video class="video" autoplay id="video"></video>
+        
+      </div>
+      <canvas class="snapshot-canvas" id="canvas"></canvas>
+      <div class="output">
+        <p class="snapshot-page-text">Photo below <i class="fas fa-hand-point-down capture-icons"></i></p>
+        <img id="photo" class="snapshot-photo">
+        
+      </div>
+      <div class="snapshot-buttons">
+        <button class="start-button" id="startButton">Take photo</button>
+        <button class="switch-button" id="switchButton">Switch button</button>
+        <button class="go-back" id="goBack">Go back</button>
+      </div>
+    </div>
+
+      <!-- Visitor homepage -->
+      <div id="visitorHomePage" class="visitor-homepage">
+      <div class="main-container">
+        <div class="wall-container">
+          <div class="text-area">
+          <h1 class="visitor-page-title">Looking for masterpiece?</h1>
+         <button class="find-btn" id="visitorListingBtn">Find one now</button>
+        </div>
+         </div> 
+        </div>
+         <div id="imageContainer" class="image-container">
+        </div>
+
+
+        <div id="carousel" class="carousel-container">
+        </div>
+        </div>
+
+      <!-- Visitor Listing -->
+      <div id="visitorListingPage" class="visitor-listing">
+        <div id="listingContainer" class="listing-container">
+        </div>
+        <div class="filtering-items">
+          <img id="filteringItems" src="images/filter.png" alt="filter image">
+        </div>
+      </div>
+
+      <!-- Visitor Listing Filter Layout -->
+
+      <div class="filter-layout" id="filterLayout">
+        <div class="filter-container">
+          <h1 class="filter-title">Filter by</h1>
+          <div class="form-group">
+          <label for="title">By Item Title</label>
+          <input type="text" id="title">
+        </div>
+        <div class="form-group">
+          <label for="artist-name">By Artist</label>
+          <select class="global-select" name="Choose" id="artistName">
+            <option value="">Choose</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>By Price</label>
+          <div class="price-group">
+        <div class="min-group">
+          <label for="min">Min:</label>
+          <input type="number" id="min" placeholder="label">
+        </div>
+        <div class="max-group">
+          <label for="max">Max:</label>
+          <input type="number" id="max" placeholder="label">
+        </div>
+      </div>
+        </div>
+        <div class="form-group">
+          <label for="type">By Type</label>
+          <select class="global-select" id="type">
+            <option value="">Choose</option>
+          </select>
+        </div>
+        </div>
+        <div id="closeFilterMenu" class="close">
+        <div class="close-mark">
+          <img class="slash" src="images/backslash.png">
+          <img class="slash" src="images/forwardslash.png">
+        </div>
+      </div>
+        <div class="filter-mark" id="filterMark">
+        <img src="images/check.png" alt="filter mark">
+      </div>
+      </div>
+
+      <!-- Auction -->
+
+      <div id="auctionPage" class="auction-page">
+      <div class="card-wrapper">
+      <div class="card-auction" id="cardAuction">
+      </div>
+     
+    </div>
+    <div class="count-wrapper">
+      <div class="count-info">
+    <div class="count">
+      <p class="infoClock">No item currently on Auction</p>
+  </div>
+   </div>
+  </div>
+  <div class="text-bid-place">Bid Place</div>
+  <div class="bid-container">
+     <div class="bid-wrapper">
+      <div class="bid-input-group">
+        <input id="ammountBid" type="number" placeholder="Amount"> <br>
+        <button id="bidBtn" class="bid-btn">Bid</i></button>
+      </div>
+    </div>
+    <div class="containerWrapper">
+      <div class="resultsWrapper">
+
+      </div>
+      
+    </div>
+      </div>
+    </div>
+    
+
+    </main>
+    
+    <!-- Main Data -->
+    <script src="data.js"></script>
+
+    <!-- Chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
+    <script defer src="handleRoute.js"></script>
+    <script src="helperFunctions.js"></script>
+    <script src="crud.js"></script>
+    <script src="auction.js"></script>
+    <script defer src="main.js"></script>
+  
+    
+  </body>
+</html>
