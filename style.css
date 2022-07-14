@@ -436,10 +436,8 @@ select {
   /* Carousel */
 
   .carousel-container {
-    position:absolute;
     height:240px;
     width:100%;
-    bottom:0;
     padding:1rem 0;
      background-color: var(--light-creme);
      font-size:9px;
