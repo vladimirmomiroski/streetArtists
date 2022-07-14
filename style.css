@@ -445,6 +445,7 @@ select {
      display:flex;
      align-items: center;
      line-height:12px;
+     position:relative;
   }
 
   .carousel-wrapper {
@@ -454,7 +455,7 @@ select {
     align-items: center;
     padding:1.5rem 0;
     margin:0 auto;
-    position:relative;
+    
   }
   .carousel-box1 {
     display:flex;
