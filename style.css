@@ -73,10 +73,6 @@ select {
      min-height:calc(100vh - 68px);
      margin-top:2px;
    }
-  
-   .visitor-homepage {
-    min-height:calc(100vh - 338px);
-   }
   /* Navbar */
 
   header {
