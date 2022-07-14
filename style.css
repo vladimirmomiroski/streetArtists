@@ -109,6 +109,10 @@ select {
     right: 5%;
   }
 
+  .auction-logo, .hamburger-menu {
+    cursor: pointer;
+  }
+
   /* Landing Page */
 
   .landing-page {
@@ -222,6 +226,7 @@ select {
      box-shadow: var(--bottom-shadow);
      z-index: 5;
   }
+
 
   .show {
     display:flex;  
@@ -434,6 +439,10 @@ select {
     box-shadow: 3px 3px 3px 3px rgb(92, 90, 90);
   }
 
+  .visitor-image {
+    cursor: pointer;
+  }
+
   /* Carousel */
 
   .carousel-container {
@@ -510,6 +519,10 @@ select {
     height:52px;
   }
 
+  .carousel-left-arrow, .carousel-right-arrow:hover {
+    cursor: pointer;
+  }
+
   .carousel-left-arrow {
     position:absolute;
     left:4%;
@@ -562,6 +575,10 @@ select {
       border:2px dashed var(--dark-brown);
       text-align: center;
       border-radius: var(--border-r);
+    }
+
+    .new-item:hover {
+      cursor: pointer;
     }
 
     .new-item-text {
@@ -626,6 +643,14 @@ select {
       border-radius: var(--border-r);
       font-size: 12px;
     }
+
+    .auctionBtn, 
+    .publishBtn,
+    .removeBtn,
+    .editBtn:hover {
+      cursor: pointer;
+    }
+
 
 
     /* New Item && Edit */
@@ -855,6 +880,10 @@ select {
       display:flex;
     }
 
+    .filtering-items:hover {
+      cursor: pointer;
+    }
+
     /* Filter Layout */
 
     .filter-layout {
@@ -922,6 +951,10 @@ select {
     display:flex;
    }
 
+   .filter-mark:hover {
+    cursor: pointer;
+   }
+
    .filter-mark img {
     width:40px;
     }
@@ -934,6 +967,10 @@ select {
     .close-mark {
       position:relative;
       top:0;
+    }
+
+    .close-mark:hover {
+      cursor: pointer;
     }
 
     .slash {
@@ -1187,6 +1224,10 @@ select {
     border-radius:var(--border-r);
     background-color: var(--dark-brown);
     color:var(--light-creme);
+  }
+
+  .bid-btn:hover {
+    cursor: pointer;
   }
 
   .fa-coins {
