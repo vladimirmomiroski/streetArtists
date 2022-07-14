@@ -64,7 +64,7 @@ select {
 
    .landing-page, 
    .artist-homepage,
-   .visitor-homepage,
+   
    .visitor-listing, 
    .auction-page,
    .filter-layout,
@@ -74,6 +74,9 @@ select {
      margin-top:2px;
    }
   
+   .visitor-homepage {
+    min-height:calc(100vh - 338px);
+   }
   /* Navbar */
 
   header {
@@ -364,6 +367,10 @@ select {
      background-color:var(--dark-brown);
      color:var(--light-creme);
   } 
+
+  .find-btn:hover {
+    cursor: pointer;
+  }
 
   .visitor-page-title {
     color:var(--dark-brown);
