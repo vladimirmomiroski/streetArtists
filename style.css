@@ -26,6 +26,7 @@ select {
   border-radius:var(--border-r);
   background: url(images/arrow-down.png) right 10% bottom 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 :root {
@@ -107,9 +108,6 @@ select {
     position: absolute;
     bottom: 30%;
     right: 5%;
-  }
-
-  .auction-logo, .hamburger-menu {
     cursor: pointer;
   }
 
@@ -139,20 +137,9 @@ select {
     width: 280px;
     height: 280px;
     border-radius: var(--border-r);
-    cursor: pointer;
     text-align: end;
     display:flex;
     justify-content: center;
-  }
-
-  .join-visitor:hover {
-    transition: .3s ease-in-out;
-    transform:scale(1.1);
-  }
-
-  .choose-artist:hover {
-    transition: .3s ease-in-out;
-    transform:scale(1.1);
   }
 
   .join-visitor {
