@@ -422,6 +422,7 @@ select {
     display: flex;
     width: 200%;
     animation: slide-right 13s linear infinite;
+    padding-bottom:1rem;
   }
 
   .visitor-image {
