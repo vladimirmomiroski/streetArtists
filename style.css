@@ -59,7 +59,6 @@ select {
 
 /* Mobile Queries */
 
-@media (max-width: 650px) {
 
    /* Pages root style*/
 
@@ -1254,4 +1253,3 @@ select {
      padding:0.7rem 0;
      color:var(--dark);
    }
- }
